@@ -1,0 +1,14 @@
+.ContributionsOverTime{
+    margin-top: calc(1.8*var(--lgText));
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.ContributionsOverTime>h4{
+    flex-basis: 100%;
+}
+
+.ContributionsOverTime>*{
+    flex:1;
+}

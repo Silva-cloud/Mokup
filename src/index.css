@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Open+Sans&display=swap');
+
+html{
+    
+    font-family: 'Open Sans', sans-serif;
+
+    /* base font-size */
+    font-size: calc(15px + 0.390625vw);
+
+    /* text sizes */
+    
+    --xlgText: calc(1.333*1.333*1.333*1rem);
+    --lgText: calc(1.333*1.333*1rem);
+    --mdText: calc(1.333*1rem);
+    --smText: calc(1rem/1.333);
+    --xsmText: calc(1rem/(1.333*1.333));
+  
+    /* colors used */
+    --purple: #4935ff;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* font classes for the app */
+
+/* font families */
+
+.fontOpenSans{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.fontBitter{
+    font-family:'Bitter';
+}
+
+/* font sizes */
+
+.xlgText{
+    font-size:var(--xlgText);
+}
+
+.lgText{
+    font-size:var(--lgText);
+}
+
+.mdText{
+    font-size:var(--mdText);
+}
+
+.smText{
+    font-size:var(--smText);
+}
+
+.xsmText{
+    font-size:var(--xsmText);
+}
+
+/* font colors */
+
+.textColorPrimary{
+    color: #2e2e2e;
+}
+
+.textColorSecondary{
+    color: #b0b0b0;
+}
+
+.textColorTertiary{
+    color: #262626;
+}
+
+.lightFontWeight{
+    font-weight: 500;
+}
+
+.boldFontWeight{
+    font-weight: 900;
+}
+
+.bolderFontWeight{
+    -webkit-text-stroke: 1px;
+}
+
+/* margin and padding classes */
+
+.mg0{
+    margin: 0;
+}
+
+/* buttons styling */
+
+.button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: var(--smText) 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--purple);
+    color: #fff;
+    
+}
+
+
+/* main sections height */
+
+.fullScreenHeight{
+    height:100vh;
+}
+
+.colorPurple{
+    color: var(--purple);
+}

@@ -1,0 +1,26 @@
+.Goals{
+    margin-top: calc(1.5*var(--mdText));
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 10px;
+    row-gap: 10px
+}
+
+.Goals>*{
+    flex:1;
+}
+
+.Goals .MyGoal{
+    flex-basis: 100%;
+}
+
+.Goals__numberMeaning{
+    margin: var(--smText) auto;
+}
+
+.Goal__hr{
+    height: 0.1px;
+    background-color: var(--purple);
+    border:none;
+}

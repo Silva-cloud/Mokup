@@ -1,0 +1,12 @@
+.UserInfoWelcome{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:var(--smText);
+}
+
+.UserInfo .UserInfoWelcome__profileImage{
+    width: calc(2*var(--lgText));
+    height: calc(2*var(--lgText));
+    border-radius: 50%;
+}

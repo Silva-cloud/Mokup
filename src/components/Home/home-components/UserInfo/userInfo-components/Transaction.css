@@ -1,0 +1,8 @@
+.Transaction{
+    margin-top: calc(var(--smText)*3);
+}
+
+.Transaction .BankName{
+    margin-top: calc(var(--smText)/3.5);
+    margin-bottom: calc(var(--smText)*1.7);
+}

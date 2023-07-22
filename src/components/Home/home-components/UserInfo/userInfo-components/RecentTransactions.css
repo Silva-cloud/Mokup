@@ -1,0 +1,9 @@
+.RecentTransactions{
+    background-color: #F8F8F8;
+    padding: calc(var(--xsmText)*3)  calc(var(--smText)*2.2);
+    margin-top: calc(var(--xsmText)*3);
+    border-top-left-radius:  var(--lgText);
+    border-top-right-radius:  var(--lgText);
+    height: 40%;
+    overflow:hidden;
+}
