@@ -1,12 +1,18 @@
+.ComparisonAndStrategy{ 
+    padding: 10%;
+}
+
 .dropMenu{
     display:flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
+    
 }
 
 /* Style for the dropdown container */
 .dropdown-container {
-    width: 311px;
+    flex-basis: 100%;
     display: flex;
     align-items: center;
     margin-bottom: 20px; /* Add some spacing between the dropdown and the border-bottom */
@@ -29,7 +35,45 @@
     margin-bottom: 5px;
   }
   
+
   .heading{
     width: 60px;
 
+  }
+
+  .CircularProgressbarContainer{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    align-items: center;
+  }
+
+  .CircularProgressbar-text{
+    font-weight: 900;
+  }
+
+  .CircularProgressBarsContainer{
+    display:flex;
+    gap: calc(var(--smText)*2);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .RetirementStrategy{
+    margin-top: calc(2.8*1rem);
+  }
+
+  .EmployeeContribution{
+    margin-top: calc(2.8*1rem);
+  }
+
+  .RetirementAge{
+    margin-top: 1 rem;
+  }
+
+  .EmployerContribution{
+    display: flex;
+    justify-content: space-between;
   }

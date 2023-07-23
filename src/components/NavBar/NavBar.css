@@ -1,0 +1,66 @@
+/* NavBar.css */
+/* .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+  } */
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    transition: background-color 0.3s;
+  }
+  .wrapper.sticky {
+    position: fixed;
+    bottom: 0; /* Set the bottom position to stick it at the end */
+    width: 100%;
+    background-color: white; /* Replace with your desired background color */
+    z-index: 1000; /* Set a higher z-index to make sure it stays on top of other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow to the sticky navbar */
+  }
+  
+  
+  .column {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .icon {
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: gray;
+    /* Adjust this value as per your preferred spacing: */
+    margin-right: 1rem; 
+
+  }
+
+  .icon:last-child {
+    margin-right: 0; /* Remove the right margin from the last icon to prevent extra spacing */
+  }
+  
+  .icon.selected {
+    background-color: royalblue;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(65, 105, 225, 0.7); /* Optional: Add a box-shadow for a more pronounced effect */
+  }
+  
+  .alternative-content {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 45px;
+  margin: 0;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background-color: royalblue; /* Add a background color for the alternative content */
+  border-radius: 5px; /* Add border radius to make it look nice */
+  opacity: 1; /* Hide the alternative content by default */
+  transition: opacity 0.3s ease; /* Add a transition for opacity */
+  color: white; /* Set text color to white */
+}
+
