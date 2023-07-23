@@ -1,0 +1,35 @@
+.dropMenu{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for the dropdown container */
+.dropdown-container {
+    width: 311px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add some spacing between the dropdown and the border-bottom */
+    border-bottom: 2px solid #ccc; /* Add a border-bottom with 2px width */
+
+
+  }
+  
+  /* Style for the dropdown */
+  .dropdown {
+    font-family: 'Arial', sans-serif; /* Use any font-family you prefer */
+    font-size: 16px;
+    color: #333; /* Use any color you like */
+    padding: 8px;
+    border: none; /* Remove the border from the dropdown */
+    border-radius: 4px; /* Add border radius to give it a rounded look */
+    background-color: transparent; /* Set the background color to transparent */
+    justify-content: center;
+    display: flex;
+    margin-bottom: 5px;
+  }
+  
+  .heading{
+    width: 60px;
+
+  }

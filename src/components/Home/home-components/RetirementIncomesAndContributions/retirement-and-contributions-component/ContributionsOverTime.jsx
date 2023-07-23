@@ -1,65 +1,93 @@
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+//   Legend
+} from "chart.js";
+import { Bar } from "react-chartjs-2";
+import ChartLegend from './ChartLegend';
+
 
 import './ContributionsOverTime.css'
 
-const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
-    height: 10,
-    borderRadius: 5,
-    [`&.${linearProgressClasses.colorPrimary}`]: {
-      backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 1 : 6],
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    // Legend
+  );
+
+  //to control bars thickness:
+  ChartJS.defaults.datasets.bar.barPercentage = 0.4;
+
+  const options = {
+    responsive: true,
+    scales: {
+      x: {
+        stacked: true,
+        grid: { display: false },
+        ticks: {
+            color: '#b0b0b0',
+            
+        }
+      },
+      y: {
+        max:400,
+        //to hide the last tick
+        afterTickToLabelConversion: function( scaleInstance ){
+            scaleInstance.ticks.pop();
+        },
+        border:{dash: [4, 4]}, // for the grid lines
+        ticks: {
+            color: '#b0b0b0',
+            stepSize: 100,
+            // Include a dollar sign in the ticks
+            callback: function(value) {
+                return '$' + value.toFixed(0);
+            }
+        }
     },
-    [`& .${linearProgressClasses.bar}`]: {
-      borderRadius: 5,
-      backgroundColor: theme.palette.mode === 'light' ? '#1a90ff' : '#308fe8',
-    },
-  }));
-    
+
+    }
+  };
+  
+  const labels = ["20", "35", "40", "45", "50", "55", "60"];
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "Employer",
+        data: [25, 30, 45, 50 ,65 , 80, 95],
+        // data: [25, 50, 75],
+        backgroundColor: "rgb(8 0 163)"
+      },
+      {
+        label: "Employee",
+        data: [55, 70,80, 110, 150, 180, 190],
+        backgroundColor: "rgb(73 53 255)"
+      },
+      {
+        label: "Total Interest",
+        data: [85, 110, 150, 200, 250, 300, 325],
+        backgroundColor: "rgb(133 175 255)"
+      },
+    ]
+  };
+
 const ContributionsOverTime = () => {
   return (
     <div className='ContributionsOverTime'>
         <h4 className=' fontBitter mg0 '>Contributions Overtime</h4>
-        <div className='Employer'>
-          <Box>
-            <br />
-            <BorderLinearProgress variant="determinate" value={18}
-            sx={{
-              backgroundColor: `rgb(255,255,255,0.1)`,
-              "& .MuiLinearProgress-bar": {
-                backgroundColor: `rgb(8 0 163)`
-              }}} />
-          </Box>
-          <h5 className='textColorSecondary Goals__numberMeaning'>Employer</h5>
-          <h4 className=' bolderFontWeight mg0 textColorTertiary fontBitter'>$73,500</h4>
-        </div>
-        <div className='Employee'>
-          <Box>
-            <br />
-            <BorderLinearProgress variant="determinate" value={18}
-            sx={{
-              backgroundColor: `rgb(255,255,255,0.1)`,
-              "& .MuiLinearProgress-bar": {
-                backgroundColor: `rgb(73 53 255)`
-              }}} />
-          </Box>
-          <h5 className='textColorSecondary Goals__numberMeaning'>Employee</h5>
-          <h4 className=' bolderFontWeight mg0 textColorTertiary fontBitter'>$52,500</h4>
-        </div>
-        <div className='Total Interests'>
-          <Box>
-            <br />
-            <BorderLinearProgress variant="determinate" value={18}
-            sx={{
-              backgroundColor: `rgb(255,255,255,0.1)`,
-              "& .MuiLinearProgress-bar": {
-                backgroundColor: `rgb(133 175 255)`
-              }}} />
-          </Box>
-          <h5 className='textColorSecondary Goals__numberMeaning'>Total Interest</h5>
-          <h4 className=' bolderFontWeight mg0 textColorTertiary fontBitter'>$244,313</h4>
-        </div>
+        <ChartLegend />
+        <Bar options={options} data={data} />
       </div>
+      
   )
 }
 

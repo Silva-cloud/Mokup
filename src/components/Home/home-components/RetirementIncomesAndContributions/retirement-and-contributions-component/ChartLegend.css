@@ -1,0 +1,14 @@
+.ChartLegend{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+
+.ChartLegend>*{
+    flex:1;
+}
+.ChartLegend>*{
+    flex:1;
+}
