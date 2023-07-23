@@ -7,7 +7,7 @@ import './App.css'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Root />,
+    element: <Root basename={true}/>,
     children: [
       {
         index: true,
