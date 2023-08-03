@@ -7,18 +7,9 @@
   .wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    /* padding: 20px; */
     transition: background-color 0.3s;
   }
-  .wrapper.sticky {
-    position: fixed;
-    bottom: 0; /* Set the bottom position to stick it at the end */
-    width: 100%;
-    background-color: white; /* Replace with your desired background color */
-    z-index: 1000; /* Set a higher z-index to make sure it stays on top of other elements */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow to the sticky navbar */
-  }
-  
   
   .column {
     display: flex;
@@ -63,4 +54,3 @@
   transition: opacity 0.3s ease; /* Add a transition for opacity */
   color: white; /* Set text color to white */
 }
-

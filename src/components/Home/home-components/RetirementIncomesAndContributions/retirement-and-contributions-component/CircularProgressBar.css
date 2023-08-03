@@ -1,0 +1,14 @@
+.CircularProgressbarContainer{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    align-items: center;
+  }
+
+  .CircularProgressbar-text{
+    font-weight: 900;
+  }
+
+
+  

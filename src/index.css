@@ -18,6 +18,7 @@ html{
     /* colors used */
     --purple: #4935ff;
 }
+html, body { margin: 0; padding: 0; }
 
 *{
     box-sizing: border-box;
@@ -112,4 +113,24 @@ html{
 
 .colorPurple{
     color: var(--purple);
+}
+
+@media (min-width: 600px){
+    html{
+        /* base font-size */
+    font-size: calc(10px + 0.390625vw);
+
+    /* text sizes */
+    
+    --xlgText: calc(1.333*1.333*1.333*1rem);
+    --lgText: calc(1.333*1.333*1rem);
+    --mdText: calc(1.333*1rem);
+    --smText: calc(1rem/1.333);
+    --xsmText: calc(1rem/(1.333*1.333));
+
+    }
+
+    .pdTopSm{
+        padding-top: 2rem;
+    }
 }

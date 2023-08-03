@@ -1,3 +1,64 @@
 .RetirementIncomesAndContributions{ 
-    padding: 10%;
+    padding: 2rem 2rem 0 2rem;
 }
+
+.Comparison{
+    margin-top: 3rem;
+}
+
+.dropMenu{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+/* Style for the dropdown container */
+.dropdown-container {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add some spacing between the dropdown and the border-bottom */
+    border-bottom: 2px solid #ccc; /* Add a border-bottom with 2px width */
+
+
+  }
+  
+  /* Style for the dropdown */
+  .dropdown {
+    font-family: 'Arial', sans-serif; /* Use any font-family you prefer */
+    font-size: 16px;
+    color: #333; /* Use any color you like */
+    padding: 8px;
+    border: none; /* Remove the border from the dropdown */
+    border-radius: 4px; /* Add border radius to give it a rounded look */
+    background-color: transparent; /* Set the background color to transparent */
+    justify-content: center;
+    display: flex;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+
+  .heading{
+    width: 60px;
+
+  }
+
+  .CircularProgressBarsContainer{
+    display:flex;
+    gap: calc(var(--smText)*2);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+
+  @media (min-width:600px) {
+    .RetirementIncomesAndContributions{
+      padding-top: 0;
+    }
+    .RetirementIncomesAndContributions:first-child{
+      padding-top: 2rem;
+    }
+  }

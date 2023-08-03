@@ -1,6 +1,6 @@
+import Box from '@mui/material/Box'
 import './RecentTransactions.css'
 import Transaction from './Transaction'
-
 const transactions = [
   {
   id:1,
@@ -22,10 +22,17 @@ const Transactions = transactions.map(transaction => <Transaction date={transact
 // date={date} bank={bank}
 const RecentTransactions = () => {
   return (
-    <div className='RecentTransactions'>
-        <h4 className=' fontBitter mg0'>Recent Transactions</h4>
-        {Transactions}
-    </div>
+    <Box sx ={
+        {
+          overflowY: { xs: 'hidden', sm: 'visible' },
+          height: {xs: "27vh", sm:"auto"}
+        }
+      } >
+      <div className='RecentTransactions'>
+          <h4 className=' fontBitter mg0'>Recent Transactions</h4>
+          {Transactions}
+      </div>
+    </Box>
   )
 }
 

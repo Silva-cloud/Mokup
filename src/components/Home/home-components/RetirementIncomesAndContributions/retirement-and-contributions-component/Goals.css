@@ -24,3 +24,13 @@
     background-color: var(--purple);
     border:none;
 }
+
+@media (min-width: 600px){
+    .Goals{
+        flex-wrap: nowrap;
+    }
+
+    .Goals .MyGoal{
+        flex-basis: auto;
+    }
+}

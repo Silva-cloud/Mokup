@@ -3,7 +3,7 @@ import profileImage from '../../../../../assets/images/profileImage.jpg'
 
 const UserInfoWelcome = () => {
   return (
-    <div className='UserInfoWelcome'>
+    <div className='UserInfoWelcome pdTopSm'>
         <img className="UserInfoWelcome__profileImage" src= {profileImage} alt='profileImage' />
         <div className='UserInfoWelcome__profileImageText'>
           <h3 className='mg0 mdText fontBitter textColorPrimary'>Hi Mike,</h3>

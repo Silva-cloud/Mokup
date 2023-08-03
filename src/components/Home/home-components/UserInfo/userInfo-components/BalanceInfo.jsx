@@ -2,7 +2,7 @@ import './BalanceInfo.css'
 
 const BalanceInfo = () => {
   return (
-    <div className='BalanceInfo'>
+    <div className='BalanceInfo pdTopS'>
         <h4 className=' fontBitter mg0 '>Today</h4>
         <h1 className='lgText mg0 bolderFontWeight textColorTertiary fontBitter'>$19.892</h1>
         <h5 className='mg0 smText  textColorSecondary'>Account Balance</h5>

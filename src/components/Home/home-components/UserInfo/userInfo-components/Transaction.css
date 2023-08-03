@@ -1,5 +1,6 @@
 .Transaction{
     margin-top: calc(var(--smText)*3);
+    /* overflow: inherit; */
 }
 
 .Transaction .BankName{

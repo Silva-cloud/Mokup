@@ -12,3 +12,28 @@
 .ChartLegend>*{
     flex:1;
 }
+
+@media (min-width: 600px){
+    .legendItem{
+        display: flex;
+        /* flex-direction: row; */
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .legendItem .Goals__numberMeaning{
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+    .legendItem>*{
+        font-size: 0.7rem;
+    }
+    .colorMap{
+        flex-basis: 3rem;
+        display: flex;
+        align-items: center;
+    }
+    .colorMap>*{
+        width:100%;
+    }
+    
+}

@@ -1,6 +1,7 @@
-import { styled } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import './ChartLegend.css'
 
@@ -16,13 +17,20 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     },
   }));
 
-const ChartLegend = () => {
+
+  const ChartLegend = () => {
+
+  const theme = useTheme();
+  const smMatched = useMediaQuery(theme.breakpoints.up('sm'));
+  const progressbarVal = smMatched? 50 : 18;
   return (
     <div className='ChartLegend'>
-        <div className='Employer'>
-          <Box>
+        <div className='legendItem'>
+          <Box className='colorMap'>
             <br />
-            <BorderLinearProgress variant="determinate" value={18}
+            <BorderLinearProgress 
+            variant="determinate" 
+            value={progressbarVal}
             sx={{
               backgroundColor: `rgb(255,255,255,0.1)`,
               "& .MuiLinearProgress-bar": {
@@ -32,10 +40,10 @@ const ChartLegend = () => {
           <h5 className='textColorSecondary Goals__numberMeaning'>Employer</h5>
           <h4 className=' bolderFontWeight mg0 textColorTertiary fontBitter'>$73,500</h4>
         </div>
-        <div className='Employee'>
-          <Box>
+        <div className='legendItem'>
+          <Box className='colorMap'>
             <br />
-            <BorderLinearProgress variant="determinate" value={18}
+            <BorderLinearProgress variant="determinate" value={progressbarVal}
             sx={{
               backgroundColor: `rgb(255,255,255,0.1)`,
               "& .MuiLinearProgress-bar": {
@@ -45,10 +53,10 @@ const ChartLegend = () => {
           <h5 className='textColorSecondary Goals__numberMeaning'>Employee</h5>
           <h4 className=' bolderFontWeight mg0 textColorTertiary fontBitter'>$52,500</h4>
         </div>
-        <div className='Total Interests'>
-          <Box>
+        <div className='legendItem'>
+          <Box className='colorMap'>
             <br />
-            <BorderLinearProgress variant="determinate" value={18}
+            <BorderLinearProgress variant="determinate" value={progressbarVal}
             sx={{
               backgroundColor: `rgb(255,255,255,0.1)`,
               "& .MuiLinearProgress-bar": {
