@@ -85,7 +85,8 @@ const ThreeColumnIconLayout = () => {
                   position: 'fixed',
                   bottom: '0',
                   height: {sm:'100%'},
-                  width: {xs:'100vw', sm: 'auto'}
+                  width: {xs:'100vw', sm: 'auto'},
+                  justifyContent: {xs: 'space-around'}
                 }}>
                   <Box sx={{
                     display: {xs: 'none',sm:'block'}
